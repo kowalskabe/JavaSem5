@@ -7,21 +7,21 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Human kowalska = new Human();
-        kowalska.car = new Car("Nissan", "Miscra", "cabriolet", "white");
+        Car emilka = new Car("Nissan", "Miscra", "cabriolet", "white", 14000.);
 
+        kowalska.setCar(emilka);
         kowalska.getSalary();
-        TimeUnit.SECONDS.sleep(1);
+        kowalska.setSalary(15000.);
         kowalska.getSalary();
-        TimeUnit.SECONDS.sleep(1);
-        kowalska.setSalary(-4500.);
-        TimeUnit.SECONDS.sleep(1);
+        kowalska.setCar(emilka);
+
+        Car celina = new Car("Mercedes", "AMG CLA45", "shooting brake", "red", 400000.);
+        kowalska.setCar(celina);
+        kowalska.setSalary(35000.);
         kowalska.getSalary();
-        TimeUnit.SECONDS.sleep(1);
-        kowalska.setSalary(6000.);
-        TimeUnit.SECONDS.sleep(1);
-        kowalska.getSalary();
+        kowalska.setCar(celina);
     }
 
 }
